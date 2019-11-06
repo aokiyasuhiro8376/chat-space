@@ -1,6 +1,6 @@
 .chat-side {
   width: 300px;
-  color: white;
+  color: $bees-color;
   float: left;
   .side-header {
     background-color: #253141;
@@ -23,14 +23,14 @@
           margin-left: 0.3rem;
         }
         a {
-          color: white;
+          color: $bees-color;
           padding: 0;
         }
         &__edit-user {
           margin-left: 0.3rem;
         }
         a {
-          color: white;
+          color: $bees-color;
           padding: 0;
         }
       }
@@ -43,18 +43,18 @@
     overflow: scroll;
     text-decoration: none;
     a {
-      
+
     }
       .group {
         margin-bottom: 40px;
         &__group-name {
           font-size: 15px;
           margin-bottom: 5px;
-          color: white;
+          color: $bees-color;
         }
         &__latest-message {
           font-size: 11px;
-          color: white;
+          color: $bees-color;
         }
       }
 
