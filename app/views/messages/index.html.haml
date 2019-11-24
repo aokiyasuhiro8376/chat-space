@@ -1,39 +1,56 @@
-.chat-side
-  .side-header
-    .side-header__box
-      %p.side-header__box__user-name
-        = current_user.name
-      %ul.side-header__box__menu
-        %li.side-header__box__menu__new-group
-          = link_to "aaaaa", class: "side-header" do
-            = fa_icon 'edit'
-        %li.side-header__box__menu__edit-user
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog', class: 'icon'
-  .groups
-    .group
-      %p.group__group-name トーク
-      %p.group__latest-message 画像が投稿されています
-    .group
-      %p.group__group-name hoge
-      %p.group__latest-message まだメッセージがありません
-.chat-main
-  .main-header
-    .main-header__left-box
-      %h2.main-header__left-box__current-group
-        hoge
-      %ul.main-header__left-box__member-list
+.wrapper
 
-        Menber:
+  = render 'shared/side_bar'
 
-        %li.main-header__left-box__member-list__member
-    =link_to "aaaaa" do
-      .main-header__left-box__edit-btn Edit
-  .messages
-  .form
-    %form.new_message{method: "post"}
-      .input-box
-        %input.input-box__text{placeholder: "type a message", type: "text"}
-        %label.input-box__image{for: "message_image"}
-          %i.fa.fa-image
-      %input.submit-btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+    .form
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = icon('fa','image',class: 'icon')
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
