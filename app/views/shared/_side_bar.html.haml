@@ -5,7 +5,7 @@
     %ul.header__lists
       %li.list
         = link_to new_group_path do
-          = icon('fas', 'pen-square', class: 'icon')
+          = icon('fas', 'edit', class: 'icon')
       %li.list
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'icon')
@@ -14,16 +14,16 @@
       .group
         = link_to group_messages_path(group) do
         .group__name
-          = group.name
+          = group.name do
         .group__message
-          メッセージはまだありません。
-      .group
-        .group__name
-          グループ名
-        .group__message
-          新着メッセージ
-      .group
-        .group__name
-          グループ名
-        .group__message
-          新着メッセージ
+          = group.show_last_message do
+      -# .group
+      -#   .group__name
+      -#     グループ名
+      -#   .group__message
+      -#     新着メッセージ
+      -# .group
+      -#   .group__name
+      -#     グループ名
+      -#   .group__message
+      -#     新着メッセージ
