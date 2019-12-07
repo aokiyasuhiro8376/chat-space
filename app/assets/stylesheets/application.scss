@@ -4,11 +4,11 @@
 @import "variable";
 @import "config/font-size";
 @import "config/reset";
-// @import "mixins/mixin";
+@import "mixins/mixin";
 @import "mixins/vendor_prefix";
 @import "modules/side_bar";
 @import "modules/main_chat";
 @import "modules/user";
 @import "modules/flash";
 @import "modules/group";
-// @import "messages/messages.scss";
+@import "messages/messages";
