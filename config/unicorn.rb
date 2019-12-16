@@ -16,7 +16,7 @@ listen "#{app_path}/shared/tmp/sockets/unicorn.sock"
 #エラーのログを記録するファイルを指定
 stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 
-#通常のログを記録するファイルを指定
+#通常のログを記録するファイルを
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
 #Railsアプリケーションの応答を待つ上限時間
